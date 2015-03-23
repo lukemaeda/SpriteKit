@@ -2,7 +2,7 @@
 //  ViewController.m
 //  SpriteKit
 //
-//  Created by MAEDA HAJIME on 2014/05/14.
+//  Created by MAEDA HAJIME on 2015/03/23.
 //  Copyright (c) 2014年 HAJIME MAEDA. All rights reserved.
 //
 
@@ -10,6 +10,9 @@
 #import "MyScene.h"
 
 @interface ViewController()
+
+// View01
+@property (weak, nonatomic) IBOutlet SKView *view01;
 
 @end
 
@@ -19,8 +22,8 @@
 {
     [super viewDidLoad];
 
-    // ビュー（SKView）の設定
-    SKView * skView = (SKView *)self.view;
+    // ビュー（SKView）の設定 view01
+    SKView * skView = (SKView *)self.view01;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     skView.showsPhysics = YES;
@@ -28,12 +31,13 @@
     // シーンの作成、設定
     SKScene * scene = [MyScene sceneWithSize:
                        skView.bounds.size];
+    
+    
     // アスペクト比を維持して表示
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // シーンのオープン
     [skView presentScene:scene];
-
 }
 
 - (void)didReceiveMemoryWarning

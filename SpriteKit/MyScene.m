@@ -2,7 +2,7 @@
 //  MyScene.m
 //  SpriteKit
 //
-//  Created by MAEDA HAJIME on 2014/05/14.
+//  Created by MAEDA HAJIME on 2015/03/23.
 //  Copyright (c) 2014年 HAJIME MAEDA. All rights reserved.
 //
 
@@ -27,8 +27,7 @@
             iv = [SKSpriteNode spriteNodeWithImageNamed:@"images.png"];
             //iv = [SKSpriteNode spriteNodeWithImageNamed:@"koyo.png"];
             // 下からの（0,0）桜画像のセンターを指定 山小屋表示位置
-            iv.position = CGPointMake(160, 160);
-            //iv.position = CGPointMake(160, 284);
+            iv.position = CGPointMake(160, 90);
             // 山小屋表示
             [self addChild:iv];
             
